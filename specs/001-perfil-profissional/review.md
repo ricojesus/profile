@@ -7,9 +7,16 @@ título ainda não commitada), `style.css`, `.github/workflows/deploy.yml`
 Legenda: 🔴 bloqueia deploy em produção (viola Princípio IV ou II) · 🟡
 inconsistência/gap menor · 🟢 conforme.
 
+> **Atualização 2026-07-20 (mesmo dia):** achado 1 resolvido pela spec
+> [`002-timeline-formacao`](../002-timeline-formacao/spec.md) — conteúdo
+> real substituiu os placeholders de empresas/serviços. Achado 2 (links
+> de contato) segue em aberto. Ver
+> [`../001-perfil-profissional/tasks.md`](./tasks.md) para status
+> atualizado por task.
+
 ## Achados
 
-### 🔴 1. Conteúdo de empresas e serviços é 100% placeholder
+### 🔴 1. Conteúdo de empresas e serviços é 100% placeholder — ✅ resolvido
 `index.html:189-251` — as três empresas e os quatro serviços ainda usam
 literalmente o texto de exemplo do template: "Nome da Empresa", "Cargo /
 Funcao", "Nome do Servico", "Descricao do servico oferecido...". As chaves
@@ -19,12 +26,11 @@ texto genérico em PT e EN.
 **Impacto:** se isso for publicado como está, o site mostra um currículo
 vazio — pior do que não ter site.
 
-### 🔴 2. Links de contato são placeholders
-`index.html:163` (LinkedIn → `linkedin.com/in/seu-perfil`), `:167`
-(GitHub → `github.com/seu-usuario`), `:171` (WhatsApp →
-`wa.me/5500000000000`). Só o e-mail (`ricojesus@hotmail.com`, linha 159)
-parece real.
-**Viola:** FR-002.
+### 🔴 2. Links de contato são placeholders — ✅ resolvido
+LinkedIn e GitHub atualizados para os destinos reais em 2026-07-20; o
+botão de WhatsApp foi removido por decisão do usuário (deixou de ser
+requisito, ver FR-001 atualizado em `spec.md`).
+**Violava:** FR-002.
 
 ### 🔴 3. `alt` da foto de perfil está com o nome errado
 `index.html:154` — `<img src="img/profile.jpeg" alt="Lucilene de Jesus" ...>`.
@@ -86,19 +92,20 @@ pelo git — `.gitignore` já cobre isso corretamente.
 | Requisito | Status |
 |-----------|--------|
 | FR-001 (hero completo) | 🟡 estrutura ok, conteúdo de contato parcialmente placeholder |
-| FR-002 (links reais) | 🔴 não atendido |
-| FR-003 (empresas reais) | 🔴 não atendido |
-| FR-004 (serviços reais) | 🔴 não atendido |
+| FR-002 (links reais) | 🟢 atendido |
+| FR-003 (empresas reais) | 🟢 atendido — via `002-timeline-formacao` (trajetória substitui empresas) |
+| FR-004 (serviços reais) | 🟢 n/a — seção removida por decisão do usuário, ver `002-timeline-formacao` |
 | FR-005 (tema persistente) | 🟢 atendido |
 | FR-006 (idioma persistente) | 🟢 atendido |
 | FR-007 (sem mistura de idioma) | 🟢 atendido |
 | FR-008 (nome consistente) | 🔴 não atendido |
-| FR-009 (alt correto) | 🔴 não atendido (foto) |
+| FR-009 (alt correto) | 🟢 atendido (achado 3 resolvido, ver T001) |
 | FR-010 (voltar ao topo) | 🟢 atendido |
-| FR-011 (sem placeholder em produção) | 🔴 não atendido — **não fazer merge/push desta working tree para `main` sem antes resolver os achados 1–3** |
+| FR-011 (sem placeholder em produção) | 🟢 atendido — nenhum achado 🔴 pendente |
 
 ## Recomendação
 
-Não publicar o estado atual do working tree. Os achados 1, 2 e 3 são
-bloqueantes (🔴) pela própria constituição do projeto (Princípios II e
-IV). O checklist executável está em [`tasks.md`](./tasks.md).
+Atualização 2026-07-20: os três achados bloqueantes (🔴 1, 2 e 3) foram
+resolvidos. Restam apenas os 🟡 (T006–T008 em `tasks.md`), que não
+impedem publicar. Antes do próximo push, ainda falta rodar a validação
+final (T009–T010 em `tasks.md`).

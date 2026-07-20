@@ -13,16 +13,22 @@ Nenhuma delas pode ficar pendente antes do próximo push para `main`.
 
 - [x] **T001** Corrigir `alt` da foto de perfil em `index.html:154` para
       refletir o nome real e atual do dono do site (achado 3).
-- [ ] **T002** `[P]` Substituir os placeholders de LinkedIn, GitHub e
-      WhatsApp em `index.html:163,167,171` pelos destinos reais (achado 2).
-- [ ] **T003** `[P]` Preencher as 3 empresas em `index.html:189-219`
-      (nome, período, cargo, descrição) com dados reais, em PT.
-- [ ] **T004** `[P]` Preencher os 4 serviços em `index.html:229-251`
-      (nome, descrição) com dados reais, em PT.
-- [ ] **T005** Replicar T003/T004 no objeto `translations.en`
-      (`index.html:61-77`) — versão em inglês dos mesmos textos reais.
-      Depende de T003/T004 estarem definidos primeiro (mesma fonte de
-      verdade, só traduzida).
+- [x] **T002** LinkedIn e GitHub atualizados para os destinos reais
+      (`linkedin.com/in/ricardo-oliveira-jesus`,
+      `github.com/ricojesus`). Botão de WhatsApp removido por decisão do
+      usuário (não é mais um requisito — ver FR-001 atualizado em
+      `spec.md`).
+- [x] **T003** ~~Preencher as 3 empresas...~~ **Superada** por
+      [`002-timeline-formacao`](../002-timeline-formacao/tasks.md): a
+      seção "Empresas" foi substituída por uma timeline de trajetória
+      com 6 posições reais (2011–atual), formato bem além do que T003
+      previa.
+- [x] **T004** ~~Preencher os 4 serviços...~~ **Superada** por
+      `002-timeline-formacao`: a seção "Serviços" foi removida (não há
+      dado real de serviços prestados) e substituída por "Formação e
+      Certificações".
+- [x] **T005** Tradução PT/EN — feita como parte de
+      `002-timeline-formacao` (todos os textos novos têm par PT/EN).
 
 ## Fase 2 — Consistência de identidade (🟡 achados 4 e 5)
 
@@ -58,7 +64,7 @@ Nenhuma delas pode ficar pendente antes do próximo push para `main`.
 
 ## Status atual
 
-Nenhuma task foi concluída ainda — todos os 🔴/🟡 de `review.md` seguem
-abertos no working tree em `2026-07-20`. As tasks 🟢 do review (tema,
-idioma, botão voltar ao topo) não geraram tasks aqui porque já estão
-conformes com a spec.
+T001–T005 concluídas — nenhum bloqueante 🔴 de `review.md` continua
+aberto. T006–T008 (consistência de `pageTitle` e checagem automática de
+placeholder no deploy) seguem abertas, mas são 🟡, não bloqueiam push.
+T009–T011 (validação final e push) ainda não foram executadas.

@@ -40,7 +40,8 @@ depois quer voltar rapidamente ao topo sem usar o scroll manual.
 
 - **FR-001**: O site DEVE exibir, na dobra inicial (hero), foto, nome
   completo, cargo/tagline atual e botões de contato (e-mail, LinkedIn,
-  GitHub, WhatsApp).
+  GitHub). ~~WhatsApp~~ removido por decisão do usuário em 2026-07-20 —
+  não é um canal de contato oferecido no site.
 - **FR-002**: Todo botão de contato DEVE apontar para um destino real e
   funcional (não pode restar placeholder do tipo `seu-perfil`,
   `seu-usuario` ou número fictício).
