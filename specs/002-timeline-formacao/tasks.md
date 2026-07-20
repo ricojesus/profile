@@ -66,6 +66,48 @@
       remover botão de WhatsApp (deixou de ser requisito, T002 da spec
       001 fechado).
 
+## Fase 6 — Adendo 2026-07-20 (FR-109, FR-110)
+
+- [x] **T119** Adicionar campo `logo` a cada posição da timeline
+      (`img/inter.png`, `img/espro.jpg`, `img/rabobank.png`,
+      `img/cmcapital.jpg`) e renderizar em badge de fundo branco fixo
+      (`.timeline-logo`), `alt=""`.
+- [x] **T120** Adicionar posição "CM Capital Markets — Coordenador de
+      Sistemas" (Dez 2006 – Jun 2011) ao array `timeline`, com 4
+      bullets PT/EN curados a partir do relato formal do usuário.
+      Depende de T119.
+- [x] **T121** Confirmar que a Mambu fica de fora por ora (decisão
+      explícita do usuário) — arquivo `img/mambu.webp` mantido no
+      repositório sem uso, documentado em `content-dados-reais.md`.
+- [x] **T122** Botão "Ver trajetória completa" (`.section-toggle`),
+      recolhendo `#timelineList` por padrão (`.timeline.is-hidden`),
+      com `aria-expanded`/`aria-controls` e label traduzido que
+      preserva estado ao trocar idioma (mesmo padrão de T117).
+
+- [x] **T123** Seção "Projetos Pessoais" (`#projetos`) criada entre
+      `#trajetoria` e `#formacao`, com array `projects` (mesmo padrão
+      `render*()` dos demais dados) e primeiro item: Gold Virtual
+      Airlines — Portal Administrativo, PHP 7, PT/EN. Sem link (não
+      fornecido pelo usuário) — fácil adicionar depois se surgir um.
+      Validado com `node --check`, jsdom (ordem das seções e conteúdo
+      PT/EN) e screenshot real claro/escuro via Playwright.
+- [x] **T124** Logo do projeto (`img/gold.jpg`) adicionado ao card em
+      badge branco (`.project-logo`), mesmo tratamento visual do logo
+      de empresa na timeline (FR-109). Validado visualmente claro/
+      escuro.
+- [x] **T125** Campo `since` ("Em produção desde 2018"/"In production
+      since 2018") adicionado ao card, como terceira linha abaixo do
+      papel/descritor. Validado PT/EN e visualmente.
+- [x] **T126** Segundo card: Gold Acars (C#, WPF, PHP Laravel, FSUIPC),
+      em produção desde 2020, reaproveitando o logo `img/gold.jpg`
+      (mesma marca, sem logo próprio enviado). Validado: 2 cards lado a
+      lado, 4 stack tags, PT/EN, claro/escuro.
+- [x] **T127** Ajuste de header: os dois cards passam a usar `name`
+      "Gold Virtual Airlines" (a marca) e `role` como o nome do sistema
+      específico ("Portal Administrativo" / "Gold Acars"), removendo o
+      texto "Coletor de Telemetria". Validado via jsdom (h3/role de
+      cada card) e screenshot.
+
 ## Observação
 
 WhatsApp foi removido do site por decisão do usuário — não é mais uma

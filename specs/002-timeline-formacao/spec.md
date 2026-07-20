@@ -75,10 +75,43 @@ empresa.
   mais"/"Read more" para expandir. O controle DEVE alternar para "Ler
   menos"/"Read less" quando expandido, expor `aria-expanded` correto e
   manter o estado (expandido/recolhido) ao trocar de idioma.
+- **FR-109** *(adendo 2026-07-20)*: Cada posição da timeline DEVE
+  exibir o logo da empresa (arquivo local em `img/`, nunca de serviço
+  de terceiros) num badge de tamanho fixo, fundo branco sólido e
+  `alt=""` (decorativo — o nome da empresa já é texto visível ao lado),
+  para normalizar logos com fundo transparente, branco ou colorido.
+- **FR-110** *(adendo 2026-07-20)*: A decisão de "carreira pré-2011 fora
+  de escopo" (Contexto) é parcialmente revista: **CM Capital Markets**
+  (Dez 2006 – Jun 2011) entra na timeline, pois o usuário forneceu dados
+  completos e a data encaixa sem gap antes do Rabobank. As demais 4
+  empresas pré-2011 (Mambu, Santander, Nextel, Telesp Celular)
+  permanecem fora — Mambu por decisão explícita apesar de já ter logo
+  disponível em `img/mambu.webp`.
+- **FR-111** *(adendo 2026-07-20)*: A seção "Trajetória profissional"
+  DEVE iniciar recolhida (as 7 posições ocultas, só o título visível),
+  com um botão "Ver trajetória completa"/"Show full journey" para
+  revelar. O botão DEVE alternar para "Ocultar trajetória"/"Hide
+  journey" quando expandido, expor `aria-expanded` correto e manter o
+  estado ao trocar de idioma — mesmo padrão de `aria-controls` já usado
+  no "Sobre" (FR-108).
+- **FR-112** *(adendo 2026-07-20)*: DEVE existir uma seção "Projetos
+  pessoais"/"Personal projects", posicionada entre "Trajetória
+  profissional" e "Formação e certificações". Cada projeto tem nome,
+  logo (mesmo tratamento de badge branco do FR-109), papel/descritor
+  curto (PT/EN), data de início ("Em produção/No ar desde X", PT/EN),
+  descrição (PT/EN) e lista de tecnologias (tags, não traduzidas).
+  Itens (ambos com `name` "Gold Virtual Airlines" — a marca — e `role`
+  como o nome do sistema específico, ajustado pelo usuário em
+  2026-07-20):
+  1. Gold Virtual Airlines — Portal Administrativo (PHP 7), em produção
+     desde 2018, logo `img/gold.jpg`.
+  2. Gold Virtual Airlines — Gold Acars (C#, WPF, PHP Laravel, FSUIPC),
+     em produção desde 2020, logo `img/gold.jpg` (reaproveitado — mesma
+     marca, nenhum logo próprio foi enviado para este item).
 
 ## Fora de escopo
 
-- Carreira pré-2011 (decisão já tomada — ver Contexto).
+- Carreira pré-2011 além de CM Capital Markets (ver FR-110).
 - Links de contato reais — LinkedIn e GitHub resolvidos via T002 da spec
   001 em 2026-07-20; WhatsApp foi removido do site (deixou de ser
   requisito).

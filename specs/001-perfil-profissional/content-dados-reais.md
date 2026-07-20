@@ -212,15 +212,38 @@ tratar como texto quase pronto para publicação (só ajustar para
   controle operacional e a confiabilidade das informações reportadas aos
   órgãos reguladores.
 
-## Carreira anterior a 2011 — não coberta pelo currículo formal
+### CM Capital Markets — Coordenador de Sistemas
+**Dez 2006 – Jun 2011** (confirmado pelo usuário em 2026-07-20 —
+encaixa sem gap logo antes do Rabobank Jun 2011)
 
-O relato informal mencionou 5 empresas adicionais, todas anteriores ao
-Rabobank (Jun 2011), que **não aparecem** no currículo formal acima —
-provavelmente porque o currículo formal foi propositalmente cortado nos
-últimos ~14 anos, prática comum. `[A CONFIRMAR: incluir essas 5 no site,
-como uma seção "Carreira inicial" mais resumida, ou deixar de fora e
-manter a timeline só a partir de 2011? Se for incluir, preciso das datas
-aproximadas de cada uma.]`
+- Coordenação de equipe de até 7 pessoas, respondendo ao Gerente de TI e
+  ao Diretor Administrativo, responsável pela implementação de todas as
+  soluções sistêmicas da corretora (automação de processos e adequação
+  a Bacen, CVM e B3).
+- Automatização dos processos de trade capture via mensageria de
+  confirmação da B3 (protocolo FIX 4.4), reduzindo o tempo de
+  processamento e 6 headcounts no middle office.
+- Implementação do sistema Sinacor para operações de Equities.
+- Evolução tecnológica das soluções sistêmicas de VB6 para C# com WPF.
+- Desenvolvimento de solução de BI (arquitetura de modelo de dados
+  multidimensional até a entrega aos usuários), apresentada em Madri ao
+  corpo diretivo da corretora.
+
+Logo: `img/cmcapital.jpg`.
+
+## Carreira anterior a 2011 — parcialmente incorporada
+
+O relato informal mencionou 5 empresas adicionais anteriores ao
+Rabobank (Jun 2011). Em 2026-07-20 o usuário decidiu reabrir essa
+decisão parcialmente: **CM Capital Markets** entrou na timeline (dados
+acima). As outras 4 seguem de fora:
+
+- **Mambu** — Application Consultant. Logo já recebida
+  (`img/mambu.webp`, escolhida entre duas opções enviadas), mas
+  **deixada de fora por decisão explícita do usuário em 2026-07-20**
+  (sem data fornecida). Arquivo fica salvo em `img/` para uso futuro.
+- **Banco Santander**, **Nextel Brasil**, **Telesp Celular SA** —
+  seguem fora, sem logo nem data.
 
 - **Mambu** — Application Consultant. Core bancário global; contratado
   para apoiar a venda do core bancário no Brasil / expansão para o
