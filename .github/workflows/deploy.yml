@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy para Produção
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Executar deploy na VPS
+        uses: appleboy/ssh-action@v1.2.2
+
+        with:
+          host: ${{ secrets.VPS_PROD_HOST }}
+          username: ${{ secrets.VPS_PROD_USER }}
+          key: ${{ secrets.VPS_PROD_SSH_KEY }}
+          script: |
+            echo "Iniciando deploy..."
+            /opt/scripts/deploy.sh ricardojesus.dev.br
+            echo "Deploy finalizado."
