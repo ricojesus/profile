@@ -211,6 +211,139 @@ main {
   font-weight: 600;
 }
 
+/* ——— SOBRE ——— */
+.about-text {
+  max-width: 720px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.about-text.is-collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.about-toggle {
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.about-toggle:hover {
+  opacity: 0.7;
+}
+
+/* ——— TIMELINE ——— */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.timeline-item {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--text-primary);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 12px;
+}
+
+.timeline-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.timeline-role {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.timeline-header .period {
+  margin-left: auto;
+}
+
+.timeline-bullets {
+  list-style: disc;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline-bullets li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ——— FORMAÇÃO E CERTIFICAÇÕES ——— */
+.subsection-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 32px 0 16px;
+}
+
+.subsection-title:first-of-type {
+  margin-top: 0;
+}
+
+.education-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cert-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--surface);
+  font-size: 0.875rem;
+}
+
+.cert-item + .cert-item {
+  border-top: 1px solid var(--border);
+}
+
+.cert-name {
+  font-weight: 500;
+}
+
+.cert-meta {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
 /* ——— FOOTER ——— */
 footer {
   text-align: center;
@@ -361,5 +494,18 @@ footer {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    padding: 20px;
+  }
+
+  .timeline-header .period {
+    margin-left: 0;
+  }
+
+  .cert-item {
+    flex-direction: column;
+    gap: 4px;
   }
 }
