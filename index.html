@@ -32,11 +32,14 @@
           sectionAbout: 'Sobre',
           aboutText: 'Lidero a evolução tecnológica de plataformas críticas do mercado financeiro, conduzindo iniciativas que unem Engenharia de Software, Arquitetura de Soluções e Produtos Digitais. Com mais de 20 anos de experiência, atuo na modernização de plataformas de investimentos, integrações com a B3 por meio do protocolo FIX e projetos regulatórios, apoiando a transformação de produtos digitais em ambientes de alta complexidade. Alio liderança técnica, definição de arquiteturas e desenvolvimento de software para construir soluções escaláveis utilizando Java, AWS, Microservices e Oracle.',
           sectionTrajectory: 'Trajetória profissional',
+          sectionProjects: 'Projetos pessoais',
           sectionFormacao: 'Formação e certificações',
           educationHeading: 'Formação acadêmica',
           certHeading: 'Certificações',
           aboutExpand: 'Ler mais',
           aboutCollapse: 'Ler menos',
+          trajectoryShow: 'Ver trajetória completa',
+          trajectoryHide: 'Ocultar trajetória',
           footer: '© 2026 Ricardo Jesus',
           themeAria: 'Alternar tema',
           langAria: 'Alternar idioma',
@@ -48,11 +51,14 @@
           sectionAbout: 'About',
           aboutText: 'I lead the technology evolution of critical financial-market platforms, driving initiatives that bring together Software Engineering, Solution Architecture and Digital Products. With over 20 years of experience, I work on modernizing investment platforms, B3 integrations via the FIX protocol, and regulatory projects, supporting digital product transformation in highly complex environments. I combine technical leadership, architecture definition and software development to build scalable solutions using Java, AWS, Microservices and Oracle.',
           sectionTrajectory: 'Professional journey',
+          sectionProjects: 'Personal projects',
           sectionFormacao: 'Education & certifications',
           educationHeading: 'Academic background',
           certHeading: 'Certifications',
           aboutExpand: 'Read more',
           aboutCollapse: 'Read less',
+          trajectoryShow: 'Show full journey',
+          trajectoryHide: 'Hide journey',
           footer: '© 2026 Ricardo Jesus',
           themeAria: 'Toggle theme',
           langAria: 'Toggle language',
@@ -63,6 +69,7 @@
       const timeline = [
         {
           company: 'Inter',
+          logo: 'img/inter.png',
           role: { pt: 'Sr Tech Manager', en: 'Sr Tech Manager' },
           period: { pt: 'Jul 2025 – Atual', en: 'Jul 2025 – Present' },
           bullets: {
@@ -82,6 +89,7 @@
         },
         {
           company: 'Inter',
+          logo: 'img/inter.png',
           role: { pt: 'Sr Tech Manager', en: 'Sr Tech Manager' },
           period: { pt: 'Out 2021 – Jun 2025', en: 'Oct 2021 – Jun 2025' },
           bullets: {
@@ -101,6 +109,7 @@
         },
         {
           company: 'Espro',
+          logo: 'img/espro.jpg',
           role: { pt: 'Gerente de Tecnologia', en: 'Technology Manager' },
           period: { pt: 'Mai 2019 – Ago 2021', en: 'May 2019 – Aug 2021' },
           bullets: {
@@ -120,6 +129,7 @@
         },
         {
           company: 'Rabobank Brasil',
+          logo: 'img/rabobank.png',
           role: { pt: 'Systems Coordinator', en: 'Systems Coordinator' },
           period: { pt: 'Nov 2015 – Jan 2019', en: 'Nov 2015 – Jan 2019' },
           bullets: {
@@ -137,6 +147,7 @@
         },
         {
           company: 'Rabobank Brasil',
+          logo: 'img/rabobank.png',
           role: { pt: 'Systems Manager', en: 'Systems Manager' },
           period: { pt: 'Jan 2013 – Out 2015', en: 'Jan 2013 – Oct 2015' },
           bullets: {
@@ -154,6 +165,7 @@
         },
         {
           company: 'Rabobank Brasil',
+          logo: 'img/rabobank.png',
           role: { pt: 'IT Consultant', en: 'IT Consultant' },
           period: { pt: 'Jun 2011 – Dez 2012', en: 'Jun 2011 – Dec 2012' },
           bullets: {
@@ -168,6 +180,51 @@
               'Deployed a Front-to-Back reconciliation solution for regulatory reporting.'
             ]
           }
+        },
+        {
+          company: 'CM Capital Markets',
+          logo: 'img/cmcapital.jpg',
+          role: { pt: 'Coordenador de Sistemas', en: 'Systems Coordinator' },
+          period: { pt: 'Dez 2006 – Jun 2011', en: 'Dec 2006 – Jun 2011' },
+          bullets: {
+            pt: [
+              'Coordenação de equipe de até 7 pessoas, respondendo ao Gerente de TI e ao Diretor Administrativo, responsável pela implementação de todas as soluções sistêmicas da corretora.',
+              'Automatização dos processos de trade capture via mensageria de confirmação da B3 (protocolo FIX 4.4), reduzindo o tempo de processamento e 6 headcounts no middle office.',
+              'Implementação do sistema Sinacor para operações de Equities e evolução tecnológica das soluções de VB6 para C#/WPF.',
+              'Desenvolvimento de solução de BI, da arquitetura de modelo de dados multidimensional à entrega aos usuários, apresentada em Madri ao corpo diretivo da corretora.'
+            ],
+            en: [
+              'Led a team of up to 7, reporting to the IT Manager and the Administrative Director, responsible for implementing all systems solutions at the brokerage.',
+              'Automated trade-capture processes via B3’s confirmation messaging (FIX 4.4 protocol), cutting processing time and 6 middle-office headcounts.',
+              'Implemented the Sinacor system for Equities operations and led the technology shift from VB6 to C#/WPF.',
+              'Built a BI solution — from multidimensional data-model architecture to delivery — presented to the brokerage’s board in Madrid.'
+            ]
+          }
+        }
+      ];
+
+      const projects = [
+        {
+          name: 'Gold Virtual Airlines',
+          logo: 'img/gold.jpg',
+          role: { pt: 'Portal Administrativo', en: 'Admin Portal' },
+          since: { pt: 'Em produção desde 2018', en: 'In production since 2018' },
+          description: {
+            pt: 'Sistema desenvolvido em PHP 7 para ser o portal administrativo da Gold Virtual Airlines, responsável por administrar todos os cadastros da virtual airline.',
+            en: 'System built in PHP 7 to serve as Gold Virtual Airlines’ admin portal, responsible for managing all of the virtual airline’s records.'
+          },
+          stack: ['PHP 7']
+        },
+        {
+          name: 'Gold Virtual Airlines',
+          logo: 'img/gold.jpg',
+          role: { pt: 'Gold Acars', en: 'Gold Acars' },
+          since: { pt: 'Em produção desde 2020', en: 'In production since 2020' },
+          description: {
+            pt: 'Sistema responsável por coletar a telemetria dos simuladores de voo utilizados pelos pilotos da virtual airline.',
+            en: 'System responsible for collecting flight telemetry data from the simulators used by the virtual airline’s pilots.'
+          },
+          stack: ['C#', 'WPF', 'PHP Laravel', 'FSUIPC']
         }
       ];
 
@@ -197,8 +254,11 @@
         const backToTopBtn = document.getElementById('backToTop');
         const aboutText = document.getElementById('aboutText');
         const aboutToggle = document.getElementById('aboutToggle');
+        const timelineList = document.getElementById('timelineList');
+        const trajectoryToggle = document.getElementById('trajectoryToggle');
         const savedLang = localStorage.getItem('lang') || 'pt';
         let aboutExpanded = false;
+        let trajectoryExpanded = false;
 
         function updateThemeIcon() {
           const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -216,11 +276,38 @@
             }).join('');
             el.innerHTML =
               '<div class="timeline-header">' +
-                '<h3>' + item.company + '</h3>' +
-                '<span class="timeline-role">' + item.role[activeLang] + '</span>' +
+                '<img class="timeline-logo" src="' + item.logo + '" alt="" />' +
+                '<div class="timeline-heading">' +
+                  '<h3>' + item.company + '</h3>' +
+                  '<span class="timeline-role">' + item.role[activeLang] + '</span>' +
+                '</div>' +
                 '<span class="period">' + item.period[activeLang] + '</span>' +
               '</div>' +
               '<ul class="timeline-bullets">' + bullets + '</ul>';
+            container.appendChild(el);
+          });
+        }
+
+        function renderProjects(activeLang) {
+          const container = document.getElementById('projectsList');
+          container.innerHTML = '';
+          projects.forEach(function (item) {
+            const el = document.createElement('article');
+            el.className = 'card project-item';
+            const stackTags = item.stack.map(function (s) {
+              return '<span class="stack-tag">' + s + '</span>';
+            }).join('');
+            el.innerHTML =
+              '<div class="project-header">' +
+                '<img class="project-logo" src="' + item.logo + '" alt="" />' +
+                '<div>' +
+                  '<h3>' + item.name + '</h3>' +
+                  '<p class="role">' + item.role[activeLang] + '</p>' +
+                  '<span class="period">' + item.since[activeLang] + '</span>' +
+                '</div>' +
+              '</div>' +
+              '<p class="description">' + item.description[activeLang] + '</p>' +
+              '<div class="project-stack">' + stackTags + '</div>';
             container.appendChild(el);
           });
         }
@@ -255,6 +342,12 @@
           aboutToggle.textContent = aboutExpanded ? dict.aboutCollapse : dict.aboutExpand;
         }
 
+        function updateTrajectoryToggle(dict) {
+          timelineList.classList.toggle('is-hidden', !trajectoryExpanded);
+          trajectoryToggle.setAttribute('aria-expanded', String(trajectoryExpanded));
+          trajectoryToggle.textContent = trajectoryExpanded ? dict.trajectoryHide : dict.trajectoryShow;
+        }
+
         function applyLanguage(lang) {
           const activeLang = translations[lang] ? lang : 'pt';
           const dict = translations[activeLang];
@@ -266,8 +359,10 @@
           });
 
           renderTimeline(activeLang);
+          renderProjects(activeLang);
           renderFormacao(activeLang);
           updateAboutToggle(dict);
+          updateTrajectoryToggle(dict);
 
           themeBtn.setAttribute('aria-label', dict.themeAria);
           langBtn.setAttribute('aria-label', dict.langAria);
@@ -308,6 +403,12 @@
           aboutExpanded = !aboutExpanded;
           const activeLang = localStorage.getItem('lang') || 'pt';
           updateAboutToggle(translations[activeLang] || translations.pt);
+        });
+
+        trajectoryToggle.addEventListener('click', function () {
+          trajectoryExpanded = !trajectoryExpanded;
+          const activeLang = localStorage.getItem('lang') || 'pt';
+          updateTrajectoryToggle(translations[activeLang] || translations.pt);
         });
 
         window.addEventListener('scroll', toggleBackToTop);
@@ -353,7 +454,14 @@
     <!-- TRAJETÓRIA -->
     <section id="trajetoria">
       <h2 class="section-title" data-i18n="sectionTrajectory">Trajetória profissional</h2>
-      <div class="timeline" id="timelineList"></div>
+      <button class="section-toggle" id="trajectoryToggle" aria-expanded="false" aria-controls="timelineList">Ver trajetória completa</button>
+      <div class="timeline is-hidden" id="timelineList"></div>
+    </section>
+
+    <!-- PROJETOS PESSOAIS -->
+    <section id="projetos">
+      <h2 class="section-title" data-i18n="sectionProjects">Projetos pessoais</h2>
+      <div class="grid" id="projectsList"></div>
     </section>
 
     <!-- FORMAÇÃO E CERTIFICAÇÕES -->
