@@ -124,3 +124,39 @@ Na pasta `img/`:
 - Conectar formulario de contato
 - Publicar no GitHub Pages
 - Melhorar SEO (meta tags e Open Graph)
+
+## Metodologia: Spec-Driven Development (SDD)
+
+Este projeto adota SDD: nenhuma mudanca de comportamento vai para `main`
+sem antes passar por spec -> plano -> tasks -> revisao. A ideia e simples
+- como o site publica direto em producao a cada push (sem staging), a
+spec e o checklist de revisao fazem o papel que um ambiente de teste
+faria em outro projeto.
+
+```text
+.specify/memory/constitution.md   Principios inegociaveis do projeto
+specs/
+  001-perfil-profissional/
+    spec.md      O que o site deve fazer e por que (sem falar de "como")
+    plan.md      Como implementar, respeitando a constituicao
+    tasks.md     Checklist acionavel, rastreavel arquivo/linha
+    review.md    Auditoria do codigo atual contra a spec
+```
+
+Fluxo para uma mudanca nova:
+
+1. `/constitution` - so quando um principio do projeto precisa mudar.
+2. `/specify` - descreve a feature em linguagem natural, gera
+   `specs/NNN-slug/spec.md`.
+3. `/clarify` - resolve ambiguidades antes de planejar.
+4. `/plan` - gera `plan.md` (stack, arquivos afetados, trade-offs).
+5. `/tasks` - quebra o plano em tasks acionaveis.
+6. `/analyze` - checagem cruzada (somente leitura) entre constituicao,
+   spec, plano e tasks.
+7. `/implement` - executa as tasks e marca o checklist.
+
+Esses comandos estao em `.claude/commands/` e assumem o Claude Code como
+agente de execucao. O estado atual do codigo em `main` foi auditado em
+[`specs/001-perfil-profissional/review.md`](specs/001-perfil-profissional/review.md)
+- ha placeholders de conteudo e links que **bloqueiam** o proximo deploy
+ate serem corrigidos (ver `tasks.md` da mesma pasta).
