@@ -105,9 +105,13 @@ empresa.
   2026-07-20):
   1. Gold Virtual Airlines — Portal Administrativo (PHP 7), em produção
      desde 2018, logo `img/gold.jpg`.
-  2. Gold Virtual Airlines — Gold Acars (C#, WPF, PHP Laravel, FSUIPC),
+  2. Gold Virtual Airlines — Gold Acars (C#, WPF, PHP 7, FSUIPC),
      em produção desde 2020, logo `img/gold.jpg` (reaproveitado — mesma
      marca, nenhum logo próprio foi enviado para este item).
+  3. Gold Virtual Airlines — Gold Core (PHP, Laravel), em produção
+     desde 2024 (01/2024) — core API para centralizar desenvolvimento
+     de backend e reaproveitamento de serviços. Logo `img/gold.jpg`
+     reaproveitado.
 
 ## Fora de escopo
 

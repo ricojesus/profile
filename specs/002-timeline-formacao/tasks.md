@@ -98,7 +98,7 @@
 - [x] **T125** Campo `since` ("Em produção desde 2018"/"In production
       since 2018") adicionado ao card, como terceira linha abaixo do
       papel/descritor. Validado PT/EN e visualmente.
-- [x] **T126** Segundo card: Gold Acars (C#, WPF, PHP Laravel, FSUIPC),
+- [x] **T126** Segundo card: Gold Acars (C#, WPF, PHP 7, FSUIPC),
       em produção desde 2020, reaproveitando o logo `img/gold.jpg`
       (mesma marca, sem logo próprio enviado). Validado: 2 cards lado a
       lado, 4 stack tags, PT/EN, claro/escuro.
@@ -107,6 +107,11 @@
       específico ("Portal Administrativo" / "Gold Acars"), removendo o
       texto "Coletor de Telemetria". Validado via jsdom (h3/role de
       cada card) e screenshot.
+- [x] **T128** Trocado "PHP Laravel" por "PHP 7" na stack do card Gold
+      Acars.
+- [x] **T129** Terceiro card: Gold Core (PHP, Laravel), em produção
+      desde 2024, mesmo padrão `name`/`role`/logo reaproveitado dos
+      demais. Validado: 3 cards lado a lado, PT/EN, claro/escuro.
 
 ## Observação
 
