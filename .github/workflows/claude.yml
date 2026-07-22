@@ -39,3 +39,4 @@ jobs:
           # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
             --model claude-sonnet-5
+            --append-system-prompt "Ao criar ou sugerir pull requests que resolvem uma issue, sempre inclua na descrição do PR a palavra-chave de fechamento em inglês 'Closes #<número da issue>' (o GitHub não reconhece 'Fecha' ou outras traduções para fechar a issue automaticamente no merge). O restante do texto pode continuar em português."
