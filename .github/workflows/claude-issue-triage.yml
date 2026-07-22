@@ -2,7 +2,7 @@ name: Claude - Triagem de Issues
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
 
 jobs:
   triage:
@@ -43,5 +43,6 @@ jobs:
 
             Não modifique código nesta triagem — apenas avalie, rotule e comente.
           claude_args: |
+            --debug
             --model claude-sonnet-5
             --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh label list),Read,Grep,Glob"
