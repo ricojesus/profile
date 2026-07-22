@@ -34,9 +34,8 @@ jobs:
       - name: Executar Claude Code
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Se você usa assinatura Claude Pro/Max em vez de API key,
-          # troque a linha acima por:
-          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Para voltar a usar API key (cobrança por token no Console), troque por:
+          # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
             --model claude-sonnet-5
