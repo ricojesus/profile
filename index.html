@@ -268,7 +268,7 @@
         const timelineList = document.getElementById('timelineList');
         const trajectoryToggle = document.getElementById('trajectoryToggle');
         const savedLang = localStorage.getItem('lang') || 'pt';
-        let aboutExpanded = false;
+        let aboutExpanded = true;
         let trajectoryExpanded = false;
 
         function updateThemeIcon() {
@@ -458,8 +458,8 @@
     <!-- SOBRE -->
     <section id="sobre">
       <h2 class="section-title" data-i18n="sectionAbout">Sobre</h2>
-      <p class="about-text is-collapsed" id="aboutText" data-i18n="aboutText">Lidero a evolução tecnológica de plataformas críticas do mercado financeiro...</p>
-      <button class="about-toggle" id="aboutToggle" aria-expanded="false" aria-controls="aboutText">Ler mais</button>
+      <p class="about-text" id="aboutText" data-i18n="aboutText">Lidero a evolução tecnológica de plataformas críticas do mercado financeiro...</p>
+      <button class="about-toggle" id="aboutToggle" aria-expanded="true" aria-controls="aboutText">Ler menos</button>
     </section>
 
     <!-- TRAJETÓRIA -->
