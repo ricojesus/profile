@@ -1,0 +1,47 @@
+name: Claude - Triagem de Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Avaliar issue com Claude
+        uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Se você usa assinatura Claude Pro/Max em vez de API key,
+          # troque a linha acima por:
+          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Você está fazendo a triagem da issue #${{ github.event.issue.number }}
+            do repositório ${{ github.repository }}.
+
+            Siga estas orientações:
+            1. Leia a issue com `gh issue view ${{ github.event.issue.number }}`.
+            2. Avalie se é bug, melhoria, dúvida ou inválida, e analise o código
+               do repositório para entender o contexto.
+            3. Aplique os labels adequados (bug, enhancement, question, invalid).
+               Liste os labels existentes com `gh label list` antes de aplicar.
+            4. Comente na issue em português com: um resumo da sua avaliação,
+               a provável causa (se for bug, cite arquivos e linhas) e uma
+               sugestão de solução.
+            5. Se a issue estiver incompleta (sem passos para reproduzir, sem
+               contexto), peça educadamente as informações que faltam.
+
+            Não modifique código nesta triagem — apenas avalie, rotule e comente.
+          claude_args: |
+            --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh label list),Read,Grep,Glob"
