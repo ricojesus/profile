@@ -427,13 +427,36 @@
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         toggleBackToTop();
+
+        const avatarImg = document.getElementById('avatarImg');
+        const avatarOverlay = document.getElementById('avatarOverlay');
+
+        function closeAvatarOverlay() {
+          avatarOverlay.classList.remove('show');
+        }
+
+        avatarImg.addEventListener('click', function () {
+          avatarOverlay.classList.add('show');
+        });
+
+        avatarOverlay.addEventListener('click', function (event) {
+          if (event.target === avatarOverlay) {
+            closeAvatarOverlay();
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            closeAvatarOverlay();
+          }
+        });
       });
     })();
   </script>
 
   <!-- HERO -->
   <header class="hero">
-    <img src="img/profile.jpeg" alt="Ricardo Jesus" class="avatar" />
+    <img src="img/profile.jpeg" alt="Ricardo Jesus" class="avatar" id="avatarImg" />
     <h1>Ricardo Jesus</h1>
     <p class="tagline" data-i18n="tagline">IT Tech Manager</p>
 
@@ -491,6 +514,10 @@
   <footer>
     <p data-i18n="footer">© 2026 Ricardo Jesus</p>
   </footer>
+
+  <div class="avatar-overlay" id="avatarOverlay">
+    <img src="img/profile.jpeg" alt="Ricardo Jesus" class="avatar-overlay-img" />
+  </div>
 
 </body>
 </html>
