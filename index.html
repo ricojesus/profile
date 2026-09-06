@@ -43,7 +43,8 @@
           footer: '© 2026 Ricardo Jesus',
           themeAria: 'Alternar tema',
           langAria: 'Alternar idioma',
-          topAria: 'Voltar ao topo'
+          topAria: 'Voltar ao topo',
+          visitSite: 'Acessar site'
         },
         en: {
           pageTitle: 'Ricardo Jesus',
@@ -62,7 +63,8 @@
           footer: '© 2026 Ricardo Jesus',
           themeAria: 'Toggle theme',
           langAria: 'Toggle language',
-          topAria: 'Back to top'
+          topAria: 'Back to top',
+          visitSite: 'Visit site'
         }
       };
 
@@ -236,6 +238,18 @@
             en: 'Gold’s core API system, responsible for centralizing backend development based on APIs and enabling service reuse.'
           },
           stack: ['PHP', 'Laravel']
+        },
+        {
+          name: 'Flight Decision',
+          logo: 'img/flightdecision.jpg',
+          link: 'https://flightdecision.com.br',
+          role: { pt: 'Análise meteorológica para pilotos', en: 'Weather analysis for pilots' },
+          since: { pt: 'Em desenvolvimento desde 2026', en: 'In development since 2026' },
+          description: {
+            pt: 'Aplicação web que cruza METAR/TAF, imagem de satélite e modelos meteorológicos para gerar, a partir de origem, destino e horários informados pelo piloto, uma análise objetiva de decisão go/no-go — classificação VMC/IMC, teto e tendência — cobrindo os aeródromos brasileiros.',
+            en: 'Web application that combines METAR/TAF, satellite imagery and weather models to turn the origin, destination and times a pilot enters into an objective go/no-go decision analysis — VMC/IMC classification, ceiling and trend — covering Brazilian aerodromes.'
+          },
+          stack: ['Laravel', 'PHP 8.4', 'Tailwind CSS', 'SQLite']
         }
       ];
 
@@ -301,6 +315,7 @@
 
         function renderProjects(activeLang) {
           const container = document.getElementById('projectsList');
+          const dict = translations[activeLang];
           container.innerHTML = '';
           projects.forEach(function (item) {
             const el = document.createElement('article');
@@ -308,6 +323,9 @@
             const stackTags = item.stack.map(function (s) {
               return '<span class="stack-tag">' + s + '</span>';
             }).join('');
+            const linkHtml = item.link
+              ? '<a class="project-link" href="' + item.link + '" target="_blank" rel="noopener">' + dict.visitSite + ' →</a>'
+              : '';
             el.innerHTML =
               '<div class="project-header">' +
                 '<img class="project-logo" src="' + item.logo + '" alt="" />' +
@@ -318,7 +336,8 @@
                 '</div>' +
               '</div>' +
               '<p class="description">' + item.description[activeLang] + '</p>' +
-              '<div class="project-stack">' + stackTags + '</div>';
+              '<div class="project-stack">' + stackTags + '</div>' +
+              linkHtml;
             container.appendChild(el);
           });
         }
