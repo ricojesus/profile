@@ -429,6 +429,19 @@ main {
   background: var(--bg);
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
 /* ——— FORMAÇÃO E CERTIFICAÇÕES ——— */
 .subsection-title {
   font-size: 0.9375rem;
